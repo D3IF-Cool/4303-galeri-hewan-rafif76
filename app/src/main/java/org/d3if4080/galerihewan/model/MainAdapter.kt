@@ -1,3 +1,5 @@
+package org.d3if4080.galerihewan.model
+
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
