@@ -31,3 +31,5 @@ object HewanApi {
 
 
 }
+
+enum class ApiStatus { LOADING, SUCCESS, FAILED }
