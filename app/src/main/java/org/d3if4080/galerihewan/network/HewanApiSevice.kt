@@ -15,12 +15,19 @@ private val retrofit = Retrofit.Builder()
     .addConverterFactory(MoshiConverterFactory.create(moshi))
     .baseUrl(BASE_URL)
     .build()
+
 interface HewanApiService {
     @GET("listhewan.json")
     suspend fun getHewan(): List<Hewan>
 }
+
 object HewanApi {
     val service: HewanApiService by lazy {
         retrofit.create(HewanApiService::class.java)
     }
+    fun getHewanUrl(nama: String): String {
+        return BASE_URL + "hewan/$nama.jpg"
+    }
+
+
 }
